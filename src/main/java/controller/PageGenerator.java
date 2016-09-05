@@ -33,17 +33,7 @@ public class PageGenerator extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. 
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet PageGenerator</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet PageGenerator at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");*/
-          /* a table with three rows and three
+            /* display a table with three rows and three
             columns, and a headline above the table*/
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -53,11 +43,6 @@ public class PageGenerator extends HttpServlet {
             out.println("<th>Author(s)</th>");
             out.println("<th>Book Title</th>");
             out.println("<th>Read?</th>");
-            /*out.println("<tr>");
-            out.println("<th>Author(s)</th>");
-            out.println("<th>Book Title</th>");
-            out.println("<th>Read?</th>");
-            out.println("</tr>");*/
             out.println("<tr>");
             out.println("<td>John Steinbeck</td>");
             out.println("<td>The Grapes of Wrathk</td>");   
@@ -67,6 +52,11 @@ public class PageGenerator extends HttpServlet {
             out.println("<td>Stacy Kaiser</td>");
             out.println("<td>How to Be a Grown Up</td>");   
             out.println("<td>Yes</td>"); 
+            out.println("</tr>");
+            out.println("<tr>");
+            out.println("<td>Bob Greene</td>");
+            out.println("<td>20 Years Younger</td>");   
+            out.println("<td>No</td>"); 
             out.println("</tr>");
             out.println("</table>");
             out.println("</div> <!-- end .container -->");
@@ -79,7 +69,6 @@ public class PageGenerator extends HttpServlet {
             out.println("}");
             out.println("</style>");
             out.println("</head>");
-            out.println("<table>");
             out.println("<p><a href='index.html'> Back to Home</a></p>");
             
                         
