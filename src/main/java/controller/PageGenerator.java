@@ -37,10 +37,35 @@ public class PageGenerator extends HttpServlet {
             columns, and a headline above the table*/
             out.println("<!DOCTYPE html>");
             out.println("<html>");
+            out.println("<head>");
             out.println("<div class='container'>");
             out.println("<table>");
-            out.println("<caption>My Reading List</caption>");
-            out.println("<th>Author(s)</th>");
+            //out.println("<caption>My Reading List</caption>");
+            out.println("<title>Activity 2:: Servlet Page Generator </title>");
+            //out.println("<style>My Reading List</style>");
+            out.println("<style type ='text/css'>");
+            out.println(" table, th, td{");
+            out.println(" border: 1px solid black;");
+            out.println("</style>");
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet PageGenerator at" +request.getContextPath()+"</h1>");
+            for(int row=1;row<4;row++){
+                out.println("<tr>");
+                for(int col=1;col<4;col++){
+                  out.println("<td>R" + row + "C" + col + "</td>");   
+                }
+                out.println("</tr>");
+            }
+              out.println("</table>");
+              out.println("</body>");
+              out.println("</html>");
+              out.println("<p><a href='index.html'> Back to Home</a></p>");
+        }
+    
+    }
+              
+         /*   out.println("<th>Author(s)</th>");
             out.println("<th>Book Title</th>");
             out.println("<th>Read?</th>");
             out.println("<tr>");
@@ -71,9 +96,9 @@ public class PageGenerator extends HttpServlet {
             out.println("</head>");
             out.println("<p><a href='index.html'> Back to Home</a></p>");
             
-                        
-        }
-    }
+             */           
+        
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
